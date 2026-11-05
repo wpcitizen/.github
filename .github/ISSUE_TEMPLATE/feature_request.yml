@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest an improvement to a WP Citizen project.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem or opportunity first. A clear use case helps maintainers evaluate the right solution.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Who experiences the problem, and in what workflow?
+      placeholder: Describe the user need or friction.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: Describe the outcome or capability you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds or alternatives have you tried?
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, examples, links, or compatibility considerations. Do not include private customer data.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions for a similar request.
+          required: true

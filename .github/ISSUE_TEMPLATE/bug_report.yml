@@ -1,0 +1,86 @@
+name: Bug report
+description: Report a reproducible problem in a WP Citizen project.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve this project. Do not include passwords, API keys, payment information, personal data, or production database dumps. Report security vulnerabilities privately using the project's security instructions.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear summary of the problem.
+      placeholder: Describe the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the problem.
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What happened instead?
+    validations:
+      required: true
+  - type: input
+    id: product-version
+    attributes:
+      label: WP Citizen product and version
+      placeholder: Product name and version, or commit hash
+    validations:
+      required: true
+  - type: input
+    id: wordpress-version
+    attributes:
+      label: WordPress version
+      placeholder: e.g. 6.x
+  - type: input
+    id: php-version
+    attributes:
+      label: PHP version
+      placeholder: e.g. 8.2
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where did this occur?
+      options:
+        - WordPress admin
+        - Public-facing site
+        - WooCommerce checkout or store
+        - REST API or integration
+        - Build, CI, or development environment
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Redact secrets, personal information, customer data, and site-specific identifiers.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for a duplicate.
+          required: true
+        - label: I removed secrets and private user data from this report.
+          required: true
